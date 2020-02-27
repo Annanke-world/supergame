@@ -1,9 +1,9 @@
 #!/usr/bin/python
 
 import pygame
-import wall
-import Player
-import Rooms
+from wall import *
+from Player import *
+from Rooms import *
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
