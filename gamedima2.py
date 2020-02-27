@@ -1,6 +1,9 @@
 #!/usr/bin/python
 
 import pygame
+import wall
+import Player
+import Rooms
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -10,7 +13,7 @@ RED = (255, 0, 0)
 PURPLE = (255, 0, 255)
 
 
-class Wall(pygame.sprite.Sprite):
+"""class Wall(pygame.sprite.Sprite):
 
 
     def __init__(self, x, y, width, height, color):
@@ -199,7 +202,7 @@ class Room5(Room):
 
         for item in walls:
             wall = Wall(item[0], item[1], item[2], item[3], item[4])
-            self.wall_list.add(wall)
+            self.wall_list.add(wall)"""
 
 def main():
 
