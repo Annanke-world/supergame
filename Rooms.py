@@ -9,7 +9,7 @@ BLUE = (0, 0, 255)
 GREEN = (0, 255, 0)
 RED = (255, 0, 0)
 PURPLE = (255, 0, 255)
-
+PINK = (246, 58, 122)
 class Room(object):
 
     wall_list = None
@@ -93,6 +93,10 @@ class Room4(Room):
     def __init__(self):
         super().__init__()
 
+ 
+        
+        
+ 
         walls = [[0, 0, 20, 250, WHITE],#LL
                  [0, 350, 20, 250, WHITE],#
                  [780, 0, 20, 250, WHITE],
@@ -120,6 +124,22 @@ class Room5(Room):
                  [450, 0, 350, 20, WHITE],
                  [450, 580, 330, 20, WHITE]
                   ]
+
+        for item in walls:
+            wall = Wall(item[0], item[1], item[2], item[3], item[4])
+            self.wall_list.add(wall)
+
+class TESTROOM(Room):
+    def __init__(self):
+        super().__init__()
+
+        walls = [[0, 0, 20, 600, PINK],
+                [780, 0 , 20, 600, PINK],
+                [0, 0, 350, 20, PINK],
+                [450, 0, 350, 20,PINK],
+                [450, 580, 350, 20,PINK],
+                [0, 580, 350, 20, PINK]
+                ]
 
         for item in walls:
             wall = Wall(item[0], item[1], item[2], item[3], item[4])
