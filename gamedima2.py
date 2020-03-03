@@ -161,7 +161,7 @@ def main():
         if current_room_no == 5:
 
             f1 = pygame.font.Font(None, 36)
-            text1 = f1.render('TEST', 1, (RED))
+            text1 = f1.render('TEST Room', 1, (RED))
  
             
  
