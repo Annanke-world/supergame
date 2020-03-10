@@ -4,8 +4,8 @@ import pygame
 from wall import *
 from Player import *
 from Rooms import *
-
-
+#from TEST import *
+PI = 3.141592653
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 BLUE = (0, 0, 255)
@@ -14,6 +14,9 @@ RED = (255, 0, 0)
 PURPLE = (255, 0, 255)
 SILVER = (171, 194, 190)
 PINK = (246, 58, 122)
+
+
+
 def main():
 
 
@@ -30,6 +33,7 @@ def main():
     player = Player(50, 50)
     movingsprites = pygame.sprite.Group()
     movingsprites.add(player)
+    
 
     rooms = []
 
@@ -50,6 +54,8 @@ def main():
 
     room = TESTROOM()
     rooms.append(room)
+
+
 
     current_room_no = 0
     current_room = rooms[current_room_no]
@@ -163,12 +169,26 @@ def main():
             f1 = pygame.font.Font(None, 36)
             text1 = f1.render('TEST Room', 1, (RED))
  
-            
- 
             screen.blit(text1, (350, 250))
+
+        if current_room_no == 5 :
+            surf = pygame.Surface((200,150))
+            surf.fill((SILVER))
+            surf_rect = surf.get_rect(x = 100 , y = 100)
+            screen.blit(surf,surf_rect)
+            
+            hits = pygame.sprite.spritecollide(surf_rect,player,False, pygame.sprite.collide_rect)
+            
+            if hits:
+               pygame.draw.ellipse(screen, GREEN, [20, 20, 250, 100], 2)
+            else:
+               pygame.draw.ellipse(screen, RED, [20, 20, 250, 100], 2)
+            
             
 
- 
+
+
+
         movingsprites.draw(screen)
         current_room.wall_list.draw(screen)
 

@@ -2,6 +2,7 @@
 
 import pygame
 from wall import *
+from TEST import *
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -11,7 +12,7 @@ RED = (255, 0, 0)
 PURPLE = (255, 0, 255)
 PINK = (246, 58, 122)
 class Room(object):
-
+    
     wall_list = None
     enemy_sprites = None
 
@@ -140,6 +141,9 @@ class TESTROOM(Room):
                 [450, 580, 350, 20,PINK],
                 [0, 580, 350, 20, PINK]
                 ]
+
+        dinamicwalls = [50,50,20,20,200,0,RED]
+
 
         for item in walls:
             wall = Wall(item[0], item[1], item[2], item[3], item[4])
